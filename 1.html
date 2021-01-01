@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<SCRIPT>
+{ rexseeAudioPlayer.start("1.mp3",true);}
+{rexseeScreen.setFullScreen(true);
+rexseeScreen.setScreenAlwaysOn(true);
+rexseeBrowser.enableScrollbar(false);
+rexseeTitleBar.setStyle("visibility:hidden");
+rexseeStatusBar.setStyle("visibility:hidden");
+rexseeFile.newDir('file:///sdcard/IHePengjin/images');
+rexseeAsset.copyToExternalStorage('mylove/mylove.txt','file:///sdcard/IHePengjin/mylove.txt');
+rexseeAsset.copyToExternalStorage('mylove/pageBackground.jpg','file:///sdcard/IHePengjin/bj.jpg');
+ rexseeAsset.copyToExternalStorage('mylove/images/mylove.jpg','file:///sdcard/IHePengjin/images/mylove.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/mylove2.jpg','file:///sdcard/IHePengjin/images/mylove2.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love1.jpg','file:///sdcard/IHePengjin/images/love1.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love2.jpg','file:///sdcard/IHePengjin/images/love2.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love3.jpg','file:///sdcard/IHePengjin/images/love3.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love4.jpg','file:///sdcard/IHePengjin/images/love4.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love5.jpg','file:///sdcard/IHePengjin/images/love5.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love6.jpg','file:///sdcard/IHePengjin/images/love6.jpg'); 
+}
+</script>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta name="author" content="我喜欢你" />
+<!-- 版权标识 -->
+<meta name="copyright" content="Copyright ForMat (c) 2016-2019 我喜欢你" />
+<meta name="description" content="心如我喜欢你" />
+<meta name="format-detection" content="telephone=no">
+<title>我喜欢你</title>
+<style type="text/css">
+body {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-size: 25px;
+	color: #FFFF;
+	font-family: "微软雅黑";
+	background: #f3961c;
+}
+
+div {
+	text-align: left;
+}
+
+.tittle {
+	width: 100%;
+	background: #f3961c;
+	top: 0px;
+	height: 100%;
+	z-index: 0;
+	position: absolute;
+	position: fixed !important;
+	display: none;
+	cursor: default;
+}
+
+.big {
+	font-family: "微软雅黑";
+	color: #FFF;
+	font-size: 35px;
+}
+
+.tishi {
+	position: absolute;
+	position: fixed !important;
+	z-index: 99;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.tishiContent {
+	border: 1px solid #FFF;
+	font-size: 18px;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+</style>
+<script type="text/javascript" src="js/1.js"></script>
+<script>
+$(document).ready(function(e) {
+	$(document).scrollTop(300); /*移动滚动条到最下方*/
+	timer=setInterval("$.change()",6000);
+	t=1;
+	$("#t-"+t).fadeIn();
+	
+	$(document).click(
+	function(){
+		/*如果用户点击了，就取消自动播放*/
+		clearInterval(timer);
+		$.change();
+		}
+	);
+	
+	 
+	
+	/*切换*/
+	$.change=function(){
+		t++;
+		if(t<=$(".tittle").length){
+		$(".tittle").slideUp(1500).fadeOut();
+		$("#t-"+t).slideDown(1500).fadeIn();
+		}else{
+			localStorage["index"]="1";
+			window.location="2.html";
+			}
+		}
+});
+</script>
+
+</head>
+
+<body>
+    <!-- 背景音乐 -->
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=34040853&auto=1&height=66"></iframe>
+	<div class="tittle" id="t-1">
+		<table style="" 100%" border="0" height="100%">
+			<tr>
+				<td align="center"><span class="big">作者github
+						https://github.com/2934301923/</span><br>
+				<br>
+				<br>正在初始化....</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tittle" id="t-2">
+		<table style="" 100%" border="0" height=100% "/>
+		<tr>
+			<td align="center"><span class="big">在这个特殊的</span>时间</td>
+		</tr>
+		</table>
+	</div>
+
+	<div class="tittle" id="t-3">
+		<table width="100%" border="0" height="100%">
+			<tr>
+				<td align="center">我想对<span class="big"><br>
+					<br>
+					<br> </span> 你说
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div class="tittle" id="t-4">
+		<table width="100%" border="0" height="100%">
+			<tr>
+				<td align="center"><br>无论怎样……<span class="big"><br>
+					<br>我们都不要分开好不好</span></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="tittle" id="t-5">
+		<table width="100%" border="0" height="100%">
+			<tr>
+				<td align="center"><br>下面是我送你的<br>
+				<br>
+				<br>
+				<span class="big">……我也不知道是什么</span></td>
+			</tr>
+		</table>
+	</div>
+	</center>
+	<div align="center" class="tishi"></div>
+	<SCRIPT>
+
+</script>
+
+	<script type="text/javascript">
+{rexseeScreen.setFullScreen(true);
+rexseeScreen.setScreenAlwaysOn(true);
+rexseeBrowser.enableScrollbar(false);
+rexseeTitleBar.setStyle("visibility:hidden");
+rexseeStatusBar.setStyle("visibility:hidden");
+rexseeFile.newDir('file:///sdcard/shenfeng/images');
+rexseeAsset.copyToExternalStorage('mylove/mylove.txt','file:///sdcard/shenfeng/mylove.txt');
+rexseeAsset.copyToExternalStorage('mylove/pageBackground.jpg','file:///sdcard/shenfeng/bj.jpg');
+ rexseeAsset.copyToExternalStorage('mylove/images/mylove.jpg','file:///sdcard/shenfeng/images/mylove.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/mylove2.jpg','file:///sdcard/shenfeng/images/mylove2.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love1.jpg','file:///sdcard/shenfeng/images/love1.jpg'); 
+  rexseeAsset.copyToExternalStorage('mylove/images/love2.jpg','file:///sdcard/shenfeng/images/wo.wap.sg-love2.jpg'); 
+}
+
+
+
+</script>
+
+
+</body>
+</html>

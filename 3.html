@@ -1,0 +1,183 @@
+<!doctype html> 
+<html lang="en" class="no-js"> 
+<head> 
+  <meta charset="gb2312" /> 
+  <title></title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css" />
+  <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
+  <script type='text/javascript' src='js/jquery.particleground.min.js'></script>
+  <script type='text/javascript' src='js/demo.js'></script>
+</head> 
+
+<body>
+
+<div id="particles">
+	<div class="intro">
+		<h1>喜欢的感觉</h1>
+		<marquee scrollamount="1" direction="up" > <br><script type="text/javascript"> 
+<!-- Begin
+/*
+ * Notes on hue
+ *
+ * This script uses hue rotation in the following manner:
+ * hue=0   is red (#FF0000)
+ * hue=60  is yellow (#FFFF00)
+ * hue=120 is green (#00FF00)
+ * hue=180 is cyan (#00FFFF)
+ * hue=240 is blue (#0000FF)
+ * hue=300 is magenta (#FF00FF)
+ * hue=360 is hue=0 (#FF0000)
+ *
+ * Notes on the script
+ *
+ * This script should function in any browser that supports document.getElementById
+ * It has been tested in Netscape7, Mozilla Firefox 1.0, and Internet Explorer 6
+ *
+ * Accessibility
+ *
+ * The script does not write the string out, but rather takes it from an existing
+ * HTML element. Therefore, users with javascript disabled will not be adverely affected.
+ * They just won't get the pretty colors.
+ */
+ 
+/*
+ * splits par.firstChild.data into 1 span for each letter
+ * ARGUMENTS
+ *   span - HTML element containing a text node as the only element
+ */
+function toSpans(span) {
+  var str=span.firstChild.data;
+  var a=str.length;
+  span.removeChild(span.firstChild);
+  for(var i=0; i<a; i++) {
+    var theSpan=document.createElement("SPAN");
+    theSpan.appendChild(document.createTextNode(str.charAt(i)));
+    span.appendChild(theSpan);
+  }
+}
+function RainbowSpan(span, hue, deg, brt, spd, hspd) {
+    this.deg=(deg==null?360:Math.abs(deg));
+    this.hue=(hue==null?0:Math.abs(hue)%360);
+    this.hspd=(hspd==null?3:Math.abs(hspd)%360);
+    this.length=span.firstChild.data.length;
+    this.span=span;
+    this.speed=(spd==null?50:Math.abs(spd));
+    this.hInc=this.deg/this.length;
+    this.brt=(brt==null?255:Math.abs(brt)%256);
+    this.timer=null;
+    toSpans(span);
+    this.moveRainbow();
+}
+RainbowSpan.prototype.moveRainbow = function() {
+  if(this.hue>359) this.hue-=360;
+  var color;
+  var b=this.brt;
+  var a=this.length;
+  var h=this.hue;
+ 
+  for(var i=0; i<a; i++) {
+ 
+    if(h>359) h-=360;
+ 
+    if(h<60) { color=Math.floor(((h)/60)*b); red=b;grn=color;blu=0; }
+    else if(h<120) { color=Math.floor(((h-60)/60)*b); red=b-color;grn=b;blu=0; }
+    else if(h<180) { color=Math.floor(((h-120)/60)*b); red=0;grn=b;blu=color; }
+    else if(h<240) { color=Math.floor(((h-180)/60)*b); red=0;grn=b-color;blu=b; }
+    else if(h<300) { color=Math.floor(((h-240)/60)*b); red=color;grn=0;blu=b; }
+    else { color=Math.floor(((h-300)/60)*b); red=b;grn=0;blu=b-color; }
+ 
+    h+=this.hInc;
+ 
+    this.span.childNodes[i].style.color="rgb("+red+", "+grn+", "+blu+")";
+  }
+  this.hue+=this.hspd;
+}
+// End -->
+</script> 
+</HEAD> 
+<title>文字闪烁分享</title>
+<BODY> 
+<style> 
+body {
+ padding:0;
+ margin:0;
+ 
+font: normal 80% Verdana;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+</style> 
+<div align="center"> 
+<h1 id="r1">我只喜欢你</h1> 
+</div> 
+<script type="text/javascript"> 
+var r1=document.getElementById("r1"); //get span to apply rainbow
+var myRainbowSpan=new RainbowSpan(r1, 0, 360, 255, 50, 18); //apply static rainbow effect
+myRainbowSpan.timer=window.setInterval("myRainbowSpan.moveRainbow()", myRainbowSpan.speed);
+</script> 
+<br> <br> <br><font size=1></font><font color=#ffffff>既然爱<br><br>为什么不说出口<br><br>有些东西失去了<br><br>就再也回不来了
+<br>如果最美好的早已留在心中<br>只会对其他的选择视而不见。
+<br><font color=#f3ff00>我在我用今生等你
+<br>我不在我在来世等你</font>
+
+<br>然后有一天<br>不再相爱了<br>本来很近的两个人<br>变得很远<br>甚至比以前更远。
+<br>我喜欢你<br>没有什么目的。只是喜欢你<br>一辈子<br>就做一次自己。这一次<br>我想给你全世界。这一次<br>遍体鳞伤也没关系。
+
+<br>这一次<br>用尽所有的勇敢。 这一次<br>可以什么都不在乎<br>但只是这一次就够了<br>因为生命再也承受不起这么重的爱情
+<br>世上最凄绝的距离是两个人本来距离很远<br>互不相识<br>忽然有一天<br>他们相识<br>相爱<br>距离变得很近。
+<br>每个人心里<br>都住着这么一个人<br>遥远的爱着。
+<br>这辈子也许都无法在一起<br>也许都没有说过几句话<br>也没有一起吃饭看电影
+<br>可是就是这个遥远的人支撑了青春里最重要<br>最灿烂的那些日子
+<br>以至于让以后的我们<br>想起来<br>没有遗憾后悔<br>只是暖暖的回忆。
+<br>没有经历过爱情的人生是不完整的<br>没有经历过痛苦的爱情是不深刻的
+<br>爱情使人生丰富<br>痛苦使爱情升华
+<br>两个人一起是为了快乐<br>分手是为了减轻痛苦<br>你无法再令我快乐<br>我也唯有离开
+<br>我离开的时候<br>也很痛苦<br>只是<br>你肯定比我痛苦<br>因为我首先说再见
+<br>首先追求快乐的是我。
+<br>脸上的快乐<br>别人看得到 心里的痛又有谁能感觉到
+<br>孤单不是与生俱来<br>而是由你爱上一个人的那一刻开始
+<br>打心底喜欢一个人<br>会喜欢到连自己都控制不了<br>哪还有功夫管爱到八分好
+<br>还是十分好；打心底喜欢一个人<br>希望他一切都好<br>希望他不会难过
+<br>更怕他因自己伤心或失望<br>甚至宁愿做错事的人是他<br>受伤的是自己
+<br>看见别人吵架亲密<br>想到的一定是他<br>他一句我爱你<br>你却可以拿着手机反复看一个晚上。
+<br>不知道什么时候起<br>看着你的头像亮起时<br>再也没有和你说话的勇气
+<br>只是对着你笑笑<br>便无语。一遍遍看着<br>一遍遍想着
+<br>这个世界好的东西太多<br>而有些东西永远不属于自己<br>所以注定只是欣赏<br>站在远远的地方望着你
+<br>时间会慢慢沉淀<br>有些人会在你心底慢慢模糊
+<br>学会放手<br>你的幸福需要自己的成全。
+<br>如果有一天<br>不再喜欢你了<br>我的生活会不会又像从前那样堕落<br>颓废<br>我不想再要那样的生活<br>所以<br>在我还没有放弃你之前
+<br>请你<br>至少要喜欢上我
+<br>如果爱上<br>就不要轻易放过机会
+<br>莽撞<br>可能使你后悔一阵子；怯懦<br>却可能使你后悔一辈子
+<br>请叫我傻瓜<br>而不是一个任由人摆布的地瓜。
+<br>你认识我时<br>我不认识你；你喜欢我时<br>我认识你；你爱上我时<br>我喜欢你；你离开我时<br>我爱上你。
+<br>你当我是个风筝<br>要不把我放了<br>要不然收好带回家
+<br>别用一条看不见的情思拴着我<br>让我心伤。
+<br>走了这么久<br>这步无可避免。以为很久以前就已经过去<br>只是我却一直坚持<br>只是我不明白<br>感情不可勉强
+<br>我无能为力<br>只是装做什么都不知道。
+<br>我用一生的时间<br>在我的心灵入口处等你。
+<br>天亮了<br>我在每天的开端等你；夜来了<br>我在梦乡中等你；
+<br>春<br>我在姹紫嫣红中等你；
+<br>夏<br>我在流火如金中等你；
+<br>秋<br>我在悲风呜咽中等你；
+<br>冬<br>我在茫然孤寂中等你<br><font></font> <br>我没有很想你<br>只是在早上醒来时<br>看看有没有你发来的信息
+<br>我没有很想你<br>只是在听歌时<br>被某句歌词击中<br>脑中出现短暂的空白
+<br>我没有很想你<br>只是想看看你的样子<br>听听你的声音
+<br>我又没有很想你<br>只是每次醒来时<br>第一个想到就是你。
+<br>为什么要那么痛苦地忘记一个人<br>时间自然会使你忘记。
+<br>如果时间不可以让你忘记不应该记住的人<br>我们失去的岁月又有甚么意义？
+<br>岁月就象一条河<br>左岸是无法忘却的回忆<br>右岸是值得把握的青春年华
+<br>中间飞快流淌的<br>是年轻隐隐的伤感。世间有许多美好的东西<br>但真正属于自己的却并不多。
+<br>世界上没有任何东西可以永恒。如果它流动<br>它就流走；如果它存着<br>它就干涸；如果它生长<br>它就慢慢凋零。</font> </marquee>		<a href="4.html" class="btn">看完了点我</a>
+<SCRIPT>
+
+</script>
+
+
+	</div>
+</div>
+</body> 
+</html> 
